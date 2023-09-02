@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Compre</title>
+</head>
+
+<body>
+  <section id="carrinho"
+    class="fixed top-0 right-0 bg-amber-100 h-screen w-64 duration-300 border-l-4 border-amber-500 p-2 flex flex-col justify-between">
+
+    <div id="cabecalho-carrinho" class="flex justify-between m-2">
+      <p>Meu carrinho</p>
+      <button id="fechar-carrinho"><span class="material-symbols-outlined">
+          cancel
+        </span></button>
+    </div>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2">
+      
+    </section>
+    <p id="preco-total" class="bg-slate-200 text-slate-1000 pl-3 rounded-md">Quantidade total: 0</p>
+    <button id="finalizar-compra" class="bg-amber-400 p-1 hover:bg-amber-800">Finalizar Comrpa</button>
+  </section>
+  <header class="flex bg-amber-200 h-16 justify-between z-10">
+    <img src="tesl.png" alt="Logo marca">
+    <div class="text-slate-1000 flex gap-2 items-end">
+      <button><span class="material-symbols-outlined">
+          person
+        </span></button>
+      <button id="abrir-carrinho"><span class="material-symbols-outlined">
+          shopping_cart_checkout</span>
+      </button>
+     
+
+    </div>
+  </header>
+
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-todos" class="peer hidden" checked>
+        <label for="exibir-todos" class="peer-checked:bg-slate-600 peer-checked:text-slate-100 peer-checked:rounded-md p-2 select-none cursor-pointer">Todos</label>
+      </div>
+
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-cozinha" class="peer hidden">
+        <label for="exibir-cozinha" class="peer-checked:bg-slate-600 peer-checked:text-slate-100 peer-checked:rounded-md  p-2 select-none cursor-pointer">Cozinha</label>
+      </div>
+
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-quarto" class="peer hidden">
+        <label for="exibir-quarto" class="peer-checked:bg-slate-600 peer-checked:text-slate-100 peer-checked:rounded-md  p-2 select-none cursor-pointer">Quarto</label>
+      </div>
+    </section>
+    <section class="flex flex-wrap mx-20" id="container-produto">
+    </section>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>
