@@ -12,7 +12,7 @@
 
 <body>
   <section id="carrinho"
-    class="fixed top-0 right-0 bg-amber-100 h-screen w-64 duration-300 border-l-4 border-amber-500 p-2 flex flex-col justify-between">
+    class="fixed top-0 right-[-300px] bg-amber-100 h-screen w-64 duration-300 border-l-4 border-amber-500 p-2 flex flex-col justify-between">
 
     <div id="cabecalho-carrinho" class="flex justify-between m-2">
       <p>Meu carrinho</p>
@@ -26,17 +26,19 @@
     <p id="preco-total" class="bg-slate-200 text-slate-1000 pl-3 rounded-md">Quantidade total: 0</p>
     <button id="finalizar-compra" class="bg-amber-400 p-1 hover:bg-amber-800">Finalizar Comrpa</button>
   </section>
-  <header class="flex bg-amber-200 h-16 justify-between z-10">
-    <img src="tesl.png" alt="Logo marca">
-    <div class="text-slate-1000 flex gap-2 items-end">
-      <button><span class="material-symbols-outlined">
-          person
-        </span></button>
+
+  <header class="flex h-16 justify-between z-10 cor-fundo">
+    <a href="/"><img src="./files/desingn.png" alt="Logo marca" class="detalhes-logo"></a>
+    <div class="text-slate-100 flex gap-2 items-end mx-5">
+      <a href="./pedidos.html">
+        <button><span class="material-symbols-outlined">
+            person
+          </span></button>
+      </a>
       <button id="abrir-carrinho"><span class="material-symbols-outlined">
           shopping_cart_checkout</span>
       </button>
      
-
     </div>
   </header>
 
@@ -49,7 +51,7 @@
 
       <div class="px-2">
         <input type="radio" name="filtro" id="exibir-cozinha" class="peer hidden">
-        <label for="exibir-cozinha" class="peer-checked:bg-slate-600 peer-checked:text-slate-100 peer-checked:rounded-md  p-2 select-none cursor-pointer">Cozinha</label>
+        <label for="exibir-cozinha" class="peer-checked:bg-amber-300 peer-checked:text-slate-100 peer-checked:rounded-md  p-2 select-none cursor-pointer">Cozinha</label>
       </div>
 
       <div class="px-2">

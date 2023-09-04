@@ -65,6 +65,10 @@ export function lerLocalStorage(chave) {
     return JSON.parse(localStorage.getItem(chave))
 }
 
+export function apagarLocalStorage(chave) {
+    localStorage.removeItem(chave)
+}
+
 export function desenharCarrihnoSimples(idProduto, idContainerHtml, quantidadeProduto) {
     const produto = catalogo.find((p) => p.id === idProduto)
     const elementoArticle = document.createElement('article')
@@ -81,7 +85,7 @@ export function desenharCarrihnoSimples(idProduto, idContainerHtml, quantidadePr
       <img 
       src="./files/${produto.nomeArquivoImg}" 
       alt="teste" class='h-20 rounded-lg'>
-      <div class='flex flex-col justify-between py-1 px-1 mb-12'>
+      <div class='flex flex-col justify-between py-1 px-1 mb-12 w-96'>
         <p class='text-sm'>${produto.nomeProduto}</p>
         <p class='text-sm'>$${produto.preco}R$</p>
       </div>
